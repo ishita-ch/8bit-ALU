@@ -1,14 +1,19 @@
 # 8-bit ALU
 
-This project implements an 8-bit Arithmetic Logic Unit (ALU) using Verilog.
+## Operations Supported
 
-## Operations
-•⁠  ⁠Addition
-•⁠  ⁠Subtraction
-•⁠  ⁠AND
-•⁠  ⁠OR
-•⁠  ⁠XOR
-•⁠  ⁠NOT
+| Select | Operation |
+|----------|----------|
+| 000 | Addition |
+| 001 | Subtraction |
+| 010 | AND |
+| 011 | OR |
+| 100 | XOR |
+| 101 | NOT A |
+| 110 | Increment A |
+| 111 | Decrement A |
 
-## Author
-Ishita
+## Files
+
+- alu.v
+- alu_tb.v
