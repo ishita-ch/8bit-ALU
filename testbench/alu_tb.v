@@ -12,6 +12,16 @@ alu uut (
 );
 
 initial begin
+    $dumpfile("alu.vcd");
+    $dumpvars(0, alu_tb);
+end
+
+initial begin
+    $monitor("time=%0t A=%d B=%d sel=%b Y=%d",
+             $time, A, B, sel, Y);
+end
+
+initial begin
     A = 8'd10;
     B = 8'd5;
 
