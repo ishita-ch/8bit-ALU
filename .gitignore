@@ -1,3 +1,4 @@
 alu_sim
 *.out
 *.log
+*.vcd
