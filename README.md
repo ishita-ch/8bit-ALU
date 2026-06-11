@@ -4,51 +4,84 @@
 
 This project implements an 8-bit Arithmetic Logic Unit (ALU) using Verilog HDL. The ALU performs arithmetic and logical operations based on a 3-bit opcode.
 
+---
+
 ## Features
 
-- Addition
-- Subtraction
-- AND
-- OR
-- XOR
-- NOT
-- Left Shift
-- Right Shift
+- 8-bit Arithmetic and Logical Operations
+- Functional Verification using Verilog Testbench
+- Simulation using Icarus Verilog
+- Version Control using Git and GitHub
 
-## Inputs
+---
 
-- A [7:0]
-- B [7:0]
-- Opcode [2:0]
+## Supported Operations
 
-## Outputs
+| Opcode | Operation |
+|---------|-----------|
+|000|Addition|
+|001|Subtraction|
+|010|AND|
+|011|OR|
+|100|XOR|
+|101|NOT|
+|110|Left Shift|
+|111|Right Shift|
 
-- Result [7:0]
-- Carry Flag
-- Zero Flag
+---
+
+## Block Diagram
+
+![Block Diagram](docs/block_diagram.png)
+
+---
+
+## Simulation Waveform
+
+![Waveform](docs/waveform.png)
+
+---
 
 ## Project Structure
 
-src/
-testbench/
-simulation/
+```
+8bit-ALU/
+│
+├── docs/
+├── src/
+├── testbench/
+├── README.md
+└── .gitignore
+```
+
+---
 
 ## Tools Used
 
 - Verilog HDL
 - Icarus Verilog
+- VS Code
 - Git
 - GitHub
-- VS Code
+
+---
+
+## How to Compile
+
+```bash
+iverilog -o alu_sim src/alu.v testbench/alu_tb.v
+```
+
+---
 
 ## How to Run
 
-iverilog -o alu_sim src/alu.v testbench/alu_tb.v
-
+```bash
 vvp alu_sim
+```
 
-## Simulation Waveform
+---
 
-The following waveform verifies the functionality of the 8-bit ALU.
+## Author
 
-![ALU Waveform](docs/waveform.png)
+Ishita Chaudhary
